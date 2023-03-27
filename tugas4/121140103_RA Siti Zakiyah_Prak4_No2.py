@@ -21,7 +21,6 @@ class Robot:
                 print(f"Robotmu ({robotmu.nama}) menyerang sebanyak {damage} DMG")
             elif self==robotlawan:
                 print(f"Robot lawan ({robotlawan.nama}) menyerang sebanyak {damage} DMG")
-        
         elif self.nama=="Alphasetia":
             damage=self.damage
             if self.jumlah_turn%2==0:
@@ -35,7 +34,6 @@ class Robot:
                 print(f"Robotmu ({robotmu.nama}) menyerang sebanyak {damage} DMG")
             elif self==robotlawan:
                 print(f"Robot lawan ({robotlawan.nama}) menyerang sebanyak {damage} DMG")
-        
         else:
             damage=self.damage
             if self.jumlah_turn%4==0:
@@ -110,6 +108,7 @@ while(robotmu.health>0 and robotlawan.health>0):
     robotmu.tambah_turn(robotlawan)
     print(f"Turn saat ini : {robotmu.jumlah_turn}")
     print(f"Robotmu ({robotmu.nama} - {robotmu.health} HP), robot lawan ({robotlawan.nama} - {robotlawan.health} HP)")
+    
     p1=int(input(f"Pilih tangan robotmu ({robotmu.nama}): "))
     p2=int(input(f"Pilih tangan robot lawan ({robotlawan.nama}): "))
     
@@ -120,7 +119,6 @@ while(robotmu.health>0 and robotlawan.health>0):
             robotlawan.lakukan_aksi(robotmu)
         else:
             robotmu.lakukan_aksi(robotlawan)
-    
     elif p1 == 2:
         if p2 == 1:
             robotmu.lakukan_aksi(robotlawan)
@@ -128,7 +126,6 @@ while(robotmu.health>0 and robotlawan.health>0):
             print("Seri!")
         else:
             robotlawan.lakukan_aksi(robotmu)
-    
     elif p1 == 3:
         if p2 == 1:
             robotlawan.lakukan_aksi(robotmu)
@@ -136,7 +133,6 @@ while(robotmu.health>0 and robotlawan.health>0):
             robotmu.lakukan_aksi(robotlawan)
         else:
             print("Seri!")
-    
     else:
         print("Pilihan salah, coba lagi!")
         robotmu.kurang_turn(robotlawan)
