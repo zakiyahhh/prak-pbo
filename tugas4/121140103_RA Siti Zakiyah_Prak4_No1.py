@@ -10,7 +10,6 @@ class Komputer:
     self.harga = harga
     self.merek = merek
 
-
 class Processor(Komputer):
 
   def __init__(self, nama, jenis, harga, merek, jumlah, kecepatan):
@@ -21,7 +20,6 @@ class Processor(Komputer):
   def tampil(self):
     print(f"Processor {self.nama} produksi {self.merek}")
 
-
 class RAM(Komputer):
 
   def __init__(self, nama, jenis, harga, merek, kapasitas):
@@ -30,7 +28,6 @@ class RAM(Komputer):
 
   def tampil(self):
     print(f"Processor {self.nama} produksi {self.merek}")
-
 
 class HDD(Komputer):
 
@@ -42,7 +39,6 @@ class HDD(Komputer):
   def tampil(self):
     print(f"Processor {self.nama} produksi {self.merek}")
 
-
 class VGA(Komputer):
 
   def __init__(self, nama, jenis, harga, merek, kapasitas):
@@ -52,7 +48,6 @@ class VGA(Komputer):
   def tampil(self):
     print(f"Processor {self.nama} produksi {self.merek}")
 
-
 class PSU(Komputer):
   def __init__(self, nama, jenis, harga, merek, daya):
     super().__init__(nama, jenis, harga, merek)
@@ -60,7 +55,6 @@ class PSU(Komputer):
 
   def tampil(self):
     print(f"Processor {self.nama} produksi {self.merek}")
-
 
 rakit = []
 
